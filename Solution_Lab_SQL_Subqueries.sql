@@ -92,22 +92,4 @@ WHERE customer_id IN(
 SELECT customer_id from(
 SELECT customer_id, sum(amount) as total_spend from payment
 GROUP BY customer_id
-HAVING sum(amount) > 112.53) as sub1
-);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+HAVING sum(amount) > 112.53) as sub1);
